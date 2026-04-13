@@ -5,7 +5,7 @@ function signup() {
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
 
-  fetch(`${API_URL}/auth/signup`, {
+  fetch(`${API_URL}/api/auth/signup`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ name, email, password }),
@@ -19,7 +19,7 @@ function login() {
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
 
-  fetch(`${API_URL}/auth/login`, {
+  fetch(`${API_URL}/api/auth/login`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ email, password }),
@@ -48,7 +48,7 @@ function showTasks() {
 function addTask() {
   const title = document.getElementById("taskInput").value;
 
-  fetch(`${API_URL}/tasks`, {
+  fetch(`${API_URL}/api/tasks`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
