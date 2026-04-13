@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api";
+const API_URL = "https://taskflow-mck7.onrender.com";
 
 function signup() {
   const name = document.getElementById("name").value;
