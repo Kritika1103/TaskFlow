@@ -64,7 +64,7 @@ function addTask() {
 }
 
 function fetchTasks() {
-  fetch(`${API_URL}/tasks`, {
+  fetch(`${API_URL}/api/tasks`, {
     headers: {
       Authorization: localStorage.getItem("token"),
     },
@@ -89,7 +89,7 @@ function fetchTasks() {
 }
 
 function toggleTask(id, completed) {
-  fetch(`${API_URL}/tasks/${id}`, {
+  fetch(`${API_URL}/api/tasks/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -100,7 +100,7 @@ function toggleTask(id, completed) {
 }
 
 function deleteTask(id) {
-  fetch(`${API_URL}/tasks/${id}`, {
+  fetch(`${API_URL}/api/tasks/${id}`, {
     method: "DELETE",
     headers: {
       Authorization: localStorage.getItem("token"),
